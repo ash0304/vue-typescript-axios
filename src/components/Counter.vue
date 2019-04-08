@@ -1,7 +1,7 @@
 <template>
     <div class="counter">
         <div>
-            <h2 @click="testJquery">This is Counter Component!!</h2>
+            <h2 @click="testJquery" id="title-2">This is Counter Component!!</h2>
             <input type="text" v-model="txt">
             <p>{{ getTxt }}</p>
             <button @click="add">add</button>
@@ -65,7 +65,9 @@ export default class Counter extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
+#title-2 {
+    color:blue;
+}
 </style>
 
 
