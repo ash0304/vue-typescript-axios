@@ -1,21 +1,27 @@
 <template>
     <div class="counter">
         <div>
-            <h2>This is Counter Component!!</h2>
+            <h2 @click="testJquery">This is Counter Component!!</h2>
             <input type="text" v-model="txt">
             <p>{{ getTxt }}</p>
             <button @click="add">add</button>
             <p>{{ sum }}</p>
+            <div id="jtest">123</div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator';
+import $ from 'jquery';
 @Component
 export default class Counter extends Vue {
     private txt: string = '1';
     private sum: number = 0;
+    // jquery
+    private testJquery() {
+        $('#jtest').css('color', 'red');
+    }
     // computed
     get getTxt() {
         return this.txt;
@@ -37,6 +43,12 @@ export default class Counter extends Vue {
     }
     private mounted() {
         console.log('mounted');
+    }
+    private beforeUpdate() {
+        console.log('beforeUpdate');
+    }
+    private updated() {
+        console.log('updated');
     }
     private beforeDestroy() {
         console.log('beforeDestroy');
