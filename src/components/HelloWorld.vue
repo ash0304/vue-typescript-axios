@@ -35,18 +35,12 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-// import { axiosService } from '../service/axios.service';
 import { getAPIService } from '../service/getAPI.service';
-
-
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
   private testMsg: string = 'So strict!';
   private test() {
-    // return axiosService.get('https://ptx.transportdata.tw/MOTC/v2/Air/Airport?$top=30&$format=JSON').then((resp) => {
-    //   console.log(resp);
-    // });
     return getAPIService.getAPI('https://ptx.transportdata.tw/MOTC/v2/Air/Airport?$top=30&$format=JSON')
     .then((resp) => {
       console.log(resp);

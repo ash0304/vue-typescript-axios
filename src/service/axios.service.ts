@@ -5,5 +5,5 @@ class AxiosService {
     return axios.get(api);
   }
 }
-// Export a singleton instance in the global namespace
+// 在全域導出獨立實體
 export const axiosService = new AxiosService();
