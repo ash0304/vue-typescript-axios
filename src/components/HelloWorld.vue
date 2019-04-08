@@ -68,7 +68,6 @@ export default class HelloWorld extends Vue {
       '&verifyCode=' +
       this.vertifyCode,
       ).then( async (resp) => {
-        console.log(resp);
         authService.setAccessToken(resp.data.access_token);
         authService.setAuthenticated('true');
       });
