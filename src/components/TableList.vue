@@ -11,6 +11,16 @@
           </div>
         </div>
       </div>
+      <!-- <div class="row">
+        <div class="col-4"  v-for="item in 10" :key="item">
+          <div class="card">
+            <img class="card-img-top avatar" src="">
+            <div class="card-body">
+              <h5 class="card-title">Card Title</h5>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
   </div>
 </template>
